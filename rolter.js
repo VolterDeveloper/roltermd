@@ -175,6 +175,10 @@ module.exports = rolter = async (rolter, m, chatUpdate, store) => {
         if (!rolter.public) {
             if (!m.key.fromMe) return
         }
+        
+        if (m.message) {
+            rolter.readMessages([m.key])
+        }
 
 	// reset limit every 12 hours
         let cron = require('node-cron')
