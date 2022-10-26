@@ -201,7 +201,6 @@ module.exports = rolter = async (rolter, m, chatUpdate, store) => {
 	  // Anti Link
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
-        m.reply(`「 *ANTI LINK* 」`)
         if (!isBotAdmins) return m.reply(`*Bot aja bukan admin anj*`)
         let gclink = (`https://chat.whatsapp.com/`+await rolter.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
@@ -1366,7 +1365,6 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
             }
             break
             case 'menu': {
-            m.reply(mess.wait)
             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let jawab = `_Hi ${pushname} ${ucapanWaktu}_
@@ -1392,7 +1390,6 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
             }
             break
             case 'allmenu': {
-            m.reply(mess.wait)
             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let jawab = `┌──❖ 「 *PREMIUM MENU* 」
@@ -1404,23 +1401,23 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
 ├│ tourl
 ├│ toimg
 ├│ sticker
-└──❖
+└────────❖
 
 ┌──❖「 *NEW MENU* 」
 ├│ menfess
 ├│ anonymous
-└──❖
+└────────❖
 
 ┌──❖「 *OTHERS MENU* 」
 ├│ rules
 ├│ sewabot
 ├│ allmenu
-└──❖
+└────────❖
 
 ┌──❖「 *CONVERT MENU* 」
 ├│ removebg
 ├│ tovideo
-└──❖
+└────────❖
  
 ┌──❖「 *GROUP MENU* 」
 ├│ linkgroup
@@ -1438,7 +1435,7 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
 ├│ mute 
 ├│ promote 
 ├│ demote
-└──❖
+└────────❖
 
 ┌──❖「 *GAME MENU* 」
 ├│ jodohku 
@@ -1451,7 +1448,7 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
 ├│ tictactoe
 ├│ afk
 ├│ suitpvp
-└──❖`
+└────────❖`
             let ments = [ownernya, me, ini_mark]
             let buttons = [{ buttonId: 'owner', buttonText: { displayText: '⌕ Owner' }, type: 1 },{ buttonId: 'ping', buttonText: { displayText: '⌕ Info Bot' }, type: 1 }]
             await rolter.sendButtonText(m.chat, buttons, jawab, nyoutube, m, {mentions: ments, quoted: fkontak})
