@@ -599,10 +599,6 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             }, 60000), poin, poin_lose, timeout
             }
             }
-            break
-	    case 'sewabot': {
-                rolter.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/e1125e91d75c52e653187.jpg' }, caption: `*List*\n*Sewa Botz*\n\n*➪ Perminggu : 1K*\n*➪ Perbulan : 2K*\n*➪ Permanen : 4K*\n\n_Note : permanen sampai admin pensi_` }, { quoted: m })
-            }
             break 
             case 'chat': {
                 if (!isCreator) throw mess.owner
@@ -1368,7 +1364,7 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
             await rolter.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak})
             }
             break
-            case 'rules': {
+            case 'sewabot': {
             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let jawab = `*_💫sewa botz_*
@@ -1406,8 +1402,8 @@ let buttons = [{ buttonId: 'owner', buttonText: { displayText: 'Owner' }, type: 
 *⛦ RUNTIME SERVER ⛦*
  ${runtime(process.uptime())}
  
- *_GROUP BOTZ_*
- *https://chat.whatsapp.com/LsnknUb99V4DOVbMie5NEV*
+*_GROUP BOTZ_*
+https://chat.whatsapp.com/LsnknUb99V4DOVbMie5NEV
  
  _Note : bot whatsapp iyalah bot hasil coding untuk berjalan sebagai kebutuhan di WhatsApp , bot whatsap mempunyai sistem unik , bisa membuat apa pun sesuai list commands_`
             let ments = [ownernya, me, ini_mark]
