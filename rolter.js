@@ -1040,7 +1040,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'owner': case 'creator': {
-                rolter.sendContact(m.chat, global.name, global.owner, m)
+                rolter.sendContact(m.chat, global.owner, m)
             }
             break
             
