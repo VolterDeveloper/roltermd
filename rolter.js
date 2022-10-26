@@ -1368,6 +1368,25 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
             await rolter.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak})
             }
             break
+            case 'rules': {
+            let ownernya = ownernomer + '@s.whatsapp.net'
+            let me = m.sender
+            let jawab = `*_💫sewa botz_*
+*_4,000 : perbulan_*
+*_8,000 : permanen bonus 1gc_*
+*_saat mau sewa gsh nurun harga deck_*
+*_minimal gsh banyak nanya sung poin aj_*
+
+*_✨premium botz_*
+*_6,000 : perbulan_*
+*_12,000 : permanen_*
+*_keuntungan :_*
+*_bisa gunain fitur prem_*
+*_bisa add bot ke group bebas_*`
+let buttons = [{ buttonId: 'owner', buttonText: { displayText: 'Owner' }, type: 1 }]
+            await rolter.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak})
+            }
+            break
             case 'menu': {
             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
@@ -1386,6 +1405,9 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
 
 *⛦ RUNTIME SERVER ⛦*
  ${runtime(process.uptime())}
+ 
+ *_GROUP BOTZ_*
+ *https://chat.whatsapp.com/LsnknUb99V4DOVbMie5NEV*
  
  _Note : bot whatsapp iyalah bot hasil coding untuk berjalan sebagai kebutuhan di WhatsApp , bot whatsap mempunyai sistem unik , bisa membuat apa pun sesuai list commands_`
             let ments = [ownernya, me, ini_mark]
