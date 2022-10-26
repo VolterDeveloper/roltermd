@@ -1380,7 +1380,7 @@ let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' },
 *_bisa gunain fitur prem_*
 *_bisa add bot ke group bebas_*`
 let buttons = [{ buttonId: 'owner', buttonText: { displayText: 'Owner' }, type: 1 }]
-            await rolter.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak})
+            await rolter.sendButtonText(m.chat, buttons, jawab, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'menu': {
