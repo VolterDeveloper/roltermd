@@ -125,29 +125,7 @@ async function startRolter() {
                     ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 
-                let buttons = [{ buttonId: 'Baca Deskripsi', buttonText: { displayText: 'Welcome' }, type: 1 }]
-                let buttonMessage = {
-  document: fs.readFileSync('./media/doc/fake.pdf'),
-  fileName : akulaku + (` | Halo ${pushname}`),
-  mimetype: `${filsk}`,
-  fileLength: jumhal,
-  pageCount: jumlha,
-  caption: jawab,
-  footer: nyoutube,
-  buttons: buttons,
-  mentions: ments,
-  headerType: 4,
-  contextInfo:{externalAdReply:{
-  title: 'Rolter Dev',
-  body: 'Subscribe My YouTube', 
-  showAdAttribution: true,
-  thumbnail: thumb,
-  mediaType: 2,
-  mediaUrl: myytv,
-  sourceUrl: myyt
-  }}
-  }
-  rolter.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
+                let buttons = [{ buttonId: 'Baca Deskripsi', buttonText: { displayText: '✋Welcome' }, type: 1 }]
                 let nyoutube = ('© Rolter Botz')
                 let jumhal = '100000000000000'
                 if (anu.action == 'add') {
