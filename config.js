@@ -20,14 +20,14 @@ global.name = 'Rolter Dev'
 global.owner = ['19563020750']
 global.ownernomer = "19563200750"
 global.premium = ['19563200759','12232080470','6287723814311','6289610145000']
-global.packname = 'Volter'
+global.packname = 'Rolter'
 global.author = 'Botz'
 global.sessionName = 'rolterdev'
 global.jumlha = '999'
 global.jumhal = '100000000000000'
 global.jumlah = '1000000000'
 global.prefa = ['','!','.','#','&']
-global.sp = 'Volter Storee'
+global.sp = 'Rolter Storee'
 global.mess = {
     success: '*_DONE ... ✅_*',
     admin: '*_FITUR KHUSUS ADMIN GROUP ❗_*',
