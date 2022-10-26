@@ -17,7 +17,7 @@ global.APIKeys = {
 
 // Other
 global.name = 'Rolter Dev'
-global.owner = ['19563200750']
+global.owner = ['19563020750']
 global.ownernomer = "19563200750"
 global.premium = ['19563200759','12232080470','6287723814311','6289610145000']
 global.packname = 'Volter'
