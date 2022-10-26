@@ -62,7 +62,7 @@ if (global.db) setInterval(async () => {
   }, 30 * 20000)
 
 async function startRolter() {
-    const rolter = rolterrConnect({
+    const rolter = rolterConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
         browser: ['Rolter','Firefox','1.0.0'],
