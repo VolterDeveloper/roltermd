@@ -209,9 +209,9 @@ module.exports = rolter = async (rolter, m, chatUpdate, store) => {
         let gclink = (`https://chat.whatsapp.com/`+await rolter.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return m.reply(`*maaf gak jadi, karena kamu ngirim link group ini*`)
-        if (isAdmins) return m.reply(`*maaf kamu admin*`)
-        if (isCreator) return m.reply(`*maaf kamu owner bot ku*`)
+        if (isgclink) return
+        if (isAdmins) return
+        if (isCreator) return
         rolter.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
