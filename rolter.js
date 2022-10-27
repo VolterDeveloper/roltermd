@@ -175,10 +175,6 @@ module.exports = rolter = async (rolter, m, chatUpdate, store) => {
         if (!rolter.public) {
             if (!m.key.fromMe) return
         }
-        
-        if (m.message) {
-            rolter.readMessages([m.key])
-        }
 
 	// reset limit every 12 hours
         let cron = require('node-cron')
@@ -205,13 +201,14 @@ module.exports = rolter = async (rolter, m, chatUpdate, store) => {
 	  // Anti Link
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
+        m.reply(`「 *ANTI LINK* 」`)
         if (!isBotAdmins) return m.reply(`*Bot aja bukan admin anj*`)
         let gclink = (`https://chat.whatsapp.com/`+await rolter.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return m.reply(`*lu send link group ini*`)
-        if (isAdmins) return (`*lu admin skipp*`)
-        if (isCreator) return (`*lu owner gw takut*`)
+        if (isgclink) return 
+        if (isAdmins) return
+        if (isCreator) return
         rolter.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -1039,7 +1036,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'owner': case 'creator': {
-                rolter.sendContact(m.chat, global.owner, m)
+                rolter.sendContact(m.chat, global.name, global.owner, m)
             }
             break
             
@@ -1363,7 +1360,6 @@ Tahulah berterimakasih sebab anda tidak perlu membayar untuk menggunakan bot ini
 let buttons = [{ buttonId: 'menu', buttonText: { displayText: '⌕ List Menu' }, type: 1 },{ buttonId: 'sewabot', buttonText: { displayText: '👑Sewa' }, type: 1 }]
             await rolter.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak})
             }
-            break
             case 'sewabot': {
             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
@@ -1384,6 +1380,7 @@ let buttons = [{ buttonId: 'owner', buttonText: { displayText: 'Owner' }, type: 
             }
             break
             case 'menu': {
+            m.reply(mess.wait)
             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let jawab = `_Hi ${pushname} ${ucapanWaktu}_
@@ -1402,7 +1399,7 @@ let buttons = [{ buttonId: 'owner', buttonText: { displayText: 'Owner' }, type: 
 *⛦ RUNTIME SERVER ⛦*
  ${runtime(process.uptime())}
  
-*_GROUP BOTZ_*
+ *_GROUP BOTZ_*
 https://chat.whatsapp.com/LsnknUb99V4DOVbMie5NEV
  
  _Note : bot whatsapp iyalah bot hasil coding untuk berjalan sebagai kebutuhan di WhatsApp , bot whatsap mempunyai sistem unik , bisa membuat apa pun sesuai list commands_`
@@ -1412,6 +1409,7 @@ https://chat.whatsapp.com/LsnknUb99V4DOVbMie5NEV
             }
             break
             case 'allmenu': {
+            m.reply(mess.wait)
             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let jawab = `┌──❖ 「 *PREMIUM MENU* 」
@@ -1423,23 +1421,23 @@ https://chat.whatsapp.com/LsnknUb99V4DOVbMie5NEV
 ├│ tourl
 ├│ toimg
 ├│ sticker
-└────────❖
+└──❖
 
 ┌──❖「 *NEW MENU* 」
 ├│ menfess
 ├│ anonymous
-└────────❖
+└──❖
 
 ┌──❖「 *OTHERS MENU* 」
 ├│ rules
 ├│ sewabot
 ├│ allmenu
-└────────❖
+└──❖
 
 ┌──❖「 *CONVERT MENU* 」
 ├│ removebg
 ├│ tovideo
-└────────❖
+└──❖
  
 ┌──❖「 *GROUP MENU* 」
 ├│ linkgroup
@@ -1457,7 +1455,7 @@ https://chat.whatsapp.com/LsnknUb99V4DOVbMie5NEV
 ├│ mute 
 ├│ promote 
 ├│ demote
-└────────❖
+└──❖
 
 ┌──❖「 *GAME MENU* 」
 ├│ jodohku 
@@ -1470,7 +1468,7 @@ https://chat.whatsapp.com/LsnknUb99V4DOVbMie5NEV
 ├│ tictactoe
 ├│ afk
 ├│ suitpvp
-└────────❖`
+└──❖`
             let ments = [ownernya, me, ini_mark]
             let buttons = [{ buttonId: 'owner', buttonText: { displayText: '⌕ Owner' }, type: 1 },{ buttonId: 'ping', buttonText: { displayText: '⌕ Info Bot' }, type: 1 }]
             await rolter.sendButtonText(m.chat, buttons, jawab, nyoutube, m, {mentions: ments, quoted: fkontak})
